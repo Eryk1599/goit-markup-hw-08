@@ -1,0 +1,30 @@
+.advantage {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    & p,
+    span {
+        color: $contact-color;
+        width: 270px;
+        font-weight: $modal-input-weight;
+        font-size: $fontSize;
+        line-height: $rules-height;
+    }
+    & h4 {
+        font-weight: $fontWeight;
+        width: 270px;
+        font-size: $fontSize;
+        line-height: $section-title-line;
+        margin-bottom: 10px;
+    }
+    &__icon {
+        width: 270px;
+        height: 120px;
+        border-radius: 4px;
+        background-color: $advantage-bg-color;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,50 @@
+.newsletter {
+    color: $main-text-color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $section-title-line;
+    width: 207px;
+    padding-bottom: 20px;
+    margin-top: -36px;
+    margin-left: 78px;
+    &__label {
+        width: 358px;
+        height: 50px;
+        background-color: $main-backgroundColor;
+        margin-left: 78px;
+        border: 1px solid $news-border-color;
+        border-radius: 4px;
+        padding-left: 20px;
+        transition-property: background-color, color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            color: $studio-color;
+            border-color: $news-border-color;
+        }
+    }
+    &__sign-up-button {
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+        font-family: "Roboto", "sans-serif";
+        font-weight: $fontWeight;
+        font-size: $button-size;
+        line-height: $button-height;
+        letter-spacing: 0.06em;
+        color: $main-text-color;
+        margin-left: 12px;
+        padding-left: 42px;
+        column-gap: 24px;
+        background-color: $active-color;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px 0px #00000026;
+        cursor: pointer;
+    }
+    &__button-icon {
+        fill: $main-text-color;
+    }
+}

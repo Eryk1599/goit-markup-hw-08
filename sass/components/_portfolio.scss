@@ -1,0 +1,62 @@
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    & h4 {
+        font-size: $title-size;
+        line-height: $title-height;
+    }
+    & span {
+        color: $contact-color;
+        font-size: $button-size;
+        line-height: $button-height;
+    }
+    &__shadow {
+        &:focus,
+        &:hover {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+            transition-property: box-shadow;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        &:hover .portfolio__description,
+        &:focus .portfolio__description {
+            transform: translateY(0%);
+            transition-property: visibility, transform, background-color;
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+    &__image-box {
+        position: relative;
+        overflow: hidden;
+        &:hover .portfolio__description,
+        &:focus .portfolio__description {
+            transform: translateY(0%);
+            transition-property: visibility, transform, background-color;
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+    &__title-space {
+        padding: 20px 24px;
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+    }
+    &__description {
+        font-family: "Roboto", "sans-serif";
+        font-weight: $modal-input-weight;
+        font-size: $title-size;
+        line-height: $description-height;
+        color: $main-text-color;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $desctiption-background-color;
+        padding: 49px 45px 49px 24px;
+        transform: translateY(100%);
+    }
+}

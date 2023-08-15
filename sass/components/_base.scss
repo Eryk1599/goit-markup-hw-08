@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+}
+button {
+    border: none;
+    border-radius: 4px;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body {
+    font-family: $fontFamily;
+    color: $nav-color;
+    margin: 0 auto;
+}
+textarea {
+    resize: none;
+}
+::placeholder {
+    color: $placeholder-color;
+}
+footer {
+    background-color: $main-backgroundColor;
+    height: 252px;
+    display: flex;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

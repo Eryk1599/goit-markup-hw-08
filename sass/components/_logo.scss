@@ -1,0 +1,20 @@
+.logo {
+    text-align: left;
+    &__web {
+        font-family: $logo-fontFamily;
+        font-weight: $fontWeight;
+        font-size: $logo-fontSize;
+        line-height: $web-height;
+        color: $active-color;
+    }
+    &__studio {
+        font-family: $logo-fontFamily;
+        font-weight: $fontWeight;
+        font-size: $logo-fontSize;
+        color: $studio-color;
+        line-height: $studio-height;
+        &--footer {
+            color: $main-text-color;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.section {
+    padding: 94px 0px;
+    & ul {
+        padding-left: 0px;
+    }
+    &__title {
+        font-size: $section-title-size;
+        line-height: $section-title-line;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__client {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+    }
+}

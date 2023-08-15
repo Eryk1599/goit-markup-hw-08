@@ -1,0 +1,48 @@
+.navigation {
+    display: flex;
+    padding: 32px 371px 32px 93px;
+    column-gap: 46px;
+    &__link {
+        color: $nav-color;
+        font-weight: $nav-weight;
+        font-size: $fontSize;
+        line-height: $section-title-line;
+        display: flex;
+        transition-property: background-color, color;
+        transition-duration: 250ms;
+        transition-timing-function: (0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            color: $active-color;
+            background-color: $main-text-color;
+        }
+    }
+    &__selected {
+        position: relative;
+        &--index::after {
+            color: $active-color;
+            content: "";
+            position: absolute;
+            width: 53px;
+            height: 4px;
+            margin-top: 28px;
+            background-color: $active-color;
+            border-radius: 2px;
+            display: block;
+        }
+        &--portfolio::after {
+            color: $active-color;
+            content: "";
+            position: absolute;
+            width: 58px;
+            height: 4px;
+            margin-top: 28px;
+            background-color: $active-color;
+            border-radius: 2px;
+            display: block;
+        }
+    }
+    &__active {
+        color: $active-color;
+    }
+}
