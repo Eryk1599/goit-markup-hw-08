@@ -12,12 +12,18 @@ a {
     text-decoration: none;
 }
 .container {
-    max-width: 1200px;
-    width: 100%;
+    max-width: 480px;
     margin: 0 auto;
     padding: 0 15px;
+    @include tablet {
+        max-width: 768px;
+    }
+    @include desktop {
+        max-width: 1200px;
+    }
 }
 body {
+    max-width: 100%;
     font-family: $fontFamily;
     color: $nav-color;
     margin: 0 auto;
@@ -35,6 +41,9 @@ footer {
 }
 .flex {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+}
+.none {
+    display: none;
 }

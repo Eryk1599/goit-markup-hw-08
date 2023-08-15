@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Zadanie-7</title>
+        <title>Zadanie-8</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -22,11 +22,21 @@
     </head>
     <body>
         <header class="page-header">
-            <div class="container">
+            <div class="flex container">
                 <a href="./index.html" class="logo"
                     ><span class="logo__web">Web</span
                     ><span class="logo__studio">Studio</span></a
                 >
+                <button
+                    type="button"
+                    class="mobile-open js-open-menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg class="mobile-open__button" width="30" height="30">
+                        <use href="./images/icons.svg#icon-menu-open"></use>
+                    </svg>
+                </button>
 
                 <nav>
                     <ul class="navigation">
@@ -76,8 +86,8 @@
             </div>
         </header>
         <main>
-            <section class="main-image">
-                <div class="container content-direction">
+            <section class="main-image none">
+                <div class="container flex content-direction">
                     <h1 class="main-image__text">
                         EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
                     </h1>
@@ -192,8 +202,8 @@
                     </div>
                 </div>
             </section>
-            <section class="section">
-                <div class="container">
+            <section class="section none">
+                <div class="container flex">
                     <ul class="advantage">
                         <li>
                             <div class="advantage__icon">
@@ -258,8 +268,8 @@
                     </ul>
                 </div>
             </section>
-            <section class="section no-padding">
-                <div class="container content-direction">
+            <section class="section none no-padding">
+                <div class="container flex content-direction">
                     <h2 class="section__title">Czym się zajmujemy</h2>
                     <ul class="product">
                         <li>
@@ -304,8 +314,8 @@
                     </ul>
                 </div>
             </section>
-            <section class="team-backgroud section">
-                <div class="container content-direction">
+            <section class="team-backgroud section none">
+                <div class="container flex content-direction">
                     <h2 class="section__title">Nasz zespół</h2>
                     <ul class="team">
                         <li class="team__shadow">
@@ -487,8 +497,8 @@
                     </ul>
                 </div>
             </section>
-            <section class="section">
-                <div class="container content-direction">
+            <section class="section none">
+                <div class="container flex content-direction">
                     <h2 class="section__title">Nasi Klienci</h2>
                     <div class="section__client">
                         <a class="client" href="#">
@@ -526,8 +536,8 @@
             </section>
             <script src="./js/modal.js"></script>
         </main>
-        <footer class="footer-background">
-            <div class="container footer">
+        <footer class="footer-background none">
+            <div class="container flex footer">
                 <div class="footer__section">
                     <address>
                         <a href="./index.html">
