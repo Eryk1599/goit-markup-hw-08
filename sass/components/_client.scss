@@ -1,5 +1,5 @@
 .client {
-    width: 170px;
+    width: 210px;
     height: 92px;
     border-radius: 4px;
     fill: $social-color;
@@ -13,7 +13,14 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
+        font-size: $modal-input-size;
         fill: $active-color;
         border-color: $active-color;
+    }
+    @include tablet {
+        width: 226px;
+    }
+    @include desktop {
+        width: 170px;
     }
 }

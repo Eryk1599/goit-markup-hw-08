@@ -38,8 +38,8 @@
                     </svg>
                 </button>
 
-                <nav>
-                    <ul class="navigation">
+                <nav class="navigation">
+                    <ul class="navigation__list">
                         <li class="navigation__selected--index">
                             <a
                                 class="navigation__active navigation__link"
@@ -60,7 +60,7 @@
                 <ul class="contact">
                     <li>
                         <a
-                            class="contact__details contact__icon"
+                            class="contact__details contact__icon-mail"
                             href="mailto:info@devstudio.com"
                             ><svg width="16px" height="12px">
                                 <use
@@ -72,7 +72,7 @@
                     </li>
                     <li>
                         <a
-                            class="contact__details contact__icon"
+                            class="contact__details contact__icon-tel"
                             href="tel:+48111111111"
                             ><svg width="10px" height="16px">
                                 <use
@@ -86,8 +86,8 @@
             </div>
         </header>
         <main>
-            <section class="main-image none">
-                <div class="container flex content-direction">
+            <section class="main-image">
+                <div class="main-image__container container">
                     <h1 class="main-image__text">
                         EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
                     </h1>
@@ -202,7 +202,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section none">
+            <section class="section">
                 <div class="container flex">
                     <ul class="advantage">
                         <li>
@@ -268,14 +268,15 @@
                     </ul>
                 </div>
             </section>
-            <section class="section none no-padding">
+            <section class="section__wwd no-padding">
                 <div class="container flex content-direction">
                     <h2 class="section__title">Czym się zajmujemy</h2>
                     <ul class="product">
                         <li>
                             <figure class="product__title">
                                 <img
-                                    src="./images/image1.jpg"
+                                    src="./images/image1.jpg
+                                    "
                                     alt="programista-kodujący-program"
                                     width="370"
                                     height="294"
@@ -288,7 +289,8 @@
                         <li>
                             <figure class="product__title">
                                 <img
-                                    src="./images/image2.jpg"
+                                    src="./images/image2.jpg
+                                    "
                                     alt="projektant-pracujący-nad-aplikacją-na-telefon"
                                     width="370"
                                     height="294"
@@ -301,7 +303,8 @@
                         <li>
                             <figure class="product__title">
                                 <img
-                                    src="./images/image3.jpg"
+                                    src="./images/image3.jpg
+                                "
                                     alt="designer-pracujący-nad-kolorystyką-strony"
                                     width="370"
                                     height="294"
@@ -314,18 +317,39 @@
                     </ul>
                 </div>
             </section>
-            <section class="team-backgroud section none">
-                <div class="container flex content-direction">
-                    <h2 class="section__title">Nasz zespół</h2>
+            <section class="section team-background">
+                <div class="container">
+                    <h2 class="section__title-2">Nasz zespół</h2>
                     <ul class="team">
                         <li class="team__shadow">
                             <figure class="team__border">
-                                <img
-                                    src="./images/image4.jpg"
-                                    alt="Product-Designer"
-                                    width="270"
-                                    height="260"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/image4-mobile.jpg   1x,
+                                            ./images/image4-mobilex2.jpg 2x
+                                        "
+                                        media="(max-width: 767px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/image4-tablet.jpg   1x,
+                                            ./images/image4-tabletx2.jpg 2x
+                                        "
+                                        media="(min-width: 768px) and (max-width: 1199px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/image4.jpg   1x,
+                                            ./images/image4x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <img
+                                        src="./images/image4.jpg"
+                                        alt="Product-Designer"
+                                    />
+                                </picture>
                                 <figcaption>
                                     <h4>John Doe</h4>
                                     <p>Product Designer</p>
@@ -364,12 +388,33 @@
                         </li>
                         <li class="team__shadow">
                             <figure class="team__border">
-                                <img
-                                    src="./images/image5.jpg"
-                                    alt="Frontend Developer"
-                                    width="270"
-                                    height="260"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/image5-mobile.jpg   1x,
+                                            ./images/image5-mobilex2.jpg 2x
+                                        "
+                                        media="(max-width: 767px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/image5-tablet.jpg   1x,
+                                            ./images/image5-tabletx2.jpg 2x
+                                        "
+                                        media="(min-width: 768px) and (max-width: 1199px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/image5.jpg   1x,
+                                            ./images/image5x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <img
+                                        src="./images/image5.jpg"
+                                        alt="Frontend Developer"
+                                    />
+                                </picture>
                                 <figcaption>
                                     <h4>John Doe</h4>
                                     <p>Frontend Developer</p>
@@ -408,12 +453,33 @@
                         </li>
                         <li class="team__shadow">
                             <figure class="team__border">
-                                <img
-                                    src="./images/image6.jpg"
-                                    alt="Marketing"
-                                    width="270"
-                                    height="260"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/image6-mobile.jpg   1x,
+                                            ./images/image6-mobilex2.jpg 2x
+                                        "
+                                        media="(max-width: 767px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/image6-tablet.jpg   1x,
+                                            ./images/image6-tabletx2.jpg 2x
+                                        "
+                                        media="(min-width: 768px) and (max-width: 1199px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/image6.jpg   1x,
+                                            ./images/image6x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <img
+                                        src="./images/image6.jpg"
+                                        alt="Marketing"
+                                    />
+                                </picture>
                                 <figcaption>
                                     <h4>John Doe</h4>
                                     <p>Marketing</p>
@@ -452,12 +518,33 @@
                         </li>
                         <li class="team__shadow">
                             <figure class="team__border">
-                                <img
-                                    src="./images/image7.jpg"
-                                    alt="UI Designer"
-                                    width="270"
-                                    height="260"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/image7-mobile.jpg   1x,
+                                            ./images/image7-mobilex2.jpg 2x
+                                        "
+                                        media="(max-width: 767px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/image7-tablet.jpg   1x,
+                                            ./images/image7-tabletx2.jpg 2x
+                                        "
+                                        media="(min-width: 768px) and (max-width: 1199px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/image7.jpg   1x,
+                                            ./images/image7x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <img
+                                        src="./images/image7.jpg"
+                                        alt="UI Designer"
+                                    />
+                                </picture>
                                 <figcaption>
                                     <h4>John Doe</h4>
                                     <p>UI Designer</p>
@@ -497,7 +584,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="section none">
+            <section class="section">
                 <div class="container flex content-direction">
                     <h2 class="section__title">Nasi Klienci</h2>
                     <div class="section__client">
@@ -534,91 +621,164 @@
                     </div>
                 </div>
             </section>
-            <script src="./js/modal.js"></script>
         </main>
-        <footer class="footer-background none">
-            <div class="container flex footer">
+        <footer class="footer__background">
+            <div class="container footer">
                 <div class="footer__section">
                     <address>
-                        <a href="./index.html">
-                            <span class="logo__web">Web</span
-                            ><span class="logo__studio logo__studio--footer"
-                                >Studio</span
-                            ></a
-                        >
-                        <p class="footer__adress">
-                            m. Warszawa, Aleje Jerozolimskie 21
-                        </p>
-                        <p class="footer__contact">info@example.com</p>
-                        <p class="footer__contact">
-                            +48&nbsp;111&nbsp;111&nbsp;111
-                        </p>
+                        <div class="footer__wrap">
+                            <a href="./index.html">
+                                <span class="logo__footer logo__web">Web</span
+                                ><span class="logo__studio logo__studio--footer"
+                                    >Studio</span
+                                ></a
+                            >
+                        </div>
+                        <div class="footer__wrap">
+                            <p class="footer__adress">
+                                m. Warszawa, Aleje Jerozolimskie 21
+                            </p>
+                            <p class="footer__contact">info@example.com</p>
+                            <p class="footer__contact">
+                                +48&nbsp;111&nbsp;111&nbsp;111
+                            </p>
+                        </div>
                     </address>
                     <div class="footer">
-                        <h3 class="footer__join-us">DOŁĄCZ DO NAS</h3>
-                        <div class="footer__social-grid">
-                            <a class="footer__social-icon" href="#">
-                                <svg width="20px" height="20px">
-                                    <use
-                                        href="./images/icons.svg#icon-instagram"
-                                    ></use>
-                                </svg>
-                            </a>
-                            <a class="footer__social-icon" href="#">
-                                <svg width="20px" height="20px">
-                                    <use
-                                        href="./images/icons.svg#icon-twitter"
-                                    ></use>
-                                </svg>
-                            </a>
-                            <a class="footer__social-icon" href="#">
-                                <svg width="20px" height="20px">
-                                    <use
-                                        href="./images/icons.svg#icon-facebook"
-                                    ></use>
-                                </svg>
-                            </a>
-                            <a class="footer__social-icon" href="#">
-                                <svg width="20px" height="20px">
-                                    <use
-                                        href="./images/icons.svg#icon-linkedin"
-                                    ></use>
-                                </svg>
-                            </a>
-                            <div class="footer">
-                                <h3 class="newsletter">
-                                    ZAPISZ SIĘ DO NEWSLETTERA
-                                </h3>
-                                <form>
-                                    <label>
-                                        <input
-                                            class="newsletter__label"
-                                            type="email"
-                                            name="email"
-                                            placeholder="E-mail"
-                                        />
-                                    </label>
-                                    <button
-                                        type="submit"
-                                        class="newsletter__sign-up-button"
-                                    >
-                                        Zapisz się
-                                        <svg
-                                            class="newsletter__button-icon"
-                                            width="24px"
-                                            height="24px"
+                        <div class="column">
+                            <h3 class="footer__join-us">DOŁĄCZ DO NAS</h3>
+                            <div class="footer__social-grid">
+                                <a class="footer__social-icon" href="#">
+                                    <svg width="20px" height="20px">
+                                        <use
+                                            href="./images/icons.svg#icon-instagram"
+                                        ></use>
+                                    </svg>
+                                </a>
+                                <a class="footer__social-icon" href="#">
+                                    <svg width="20px" height="20px">
+                                        <use
+                                            href="./images/icons.svg#icon-twitter"
+                                        ></use>
+                                    </svg>
+                                </a>
+                                <a class="footer__social-icon" href="#">
+                                    <svg width="20px" height="20px">
+                                        <use
+                                            href="./images/icons.svg#icon-facebook"
+                                        ></use>
+                                    </svg>
+                                </a>
+                                <a class="footer__social-icon" href="#">
+                                    <svg width="20px" height="20px">
+                                        <use
+                                            href="./images/icons.svg#icon-linkedin"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="column">
+                                <section>
+                                    <h3 class="newsletter">
+                                        ZAPISZ SIĘ DO NEWSLETTERA
+                                    </h3>
+                                    <form>
+                                        <label>
+                                            <input
+                                                class="newsletter__label"
+                                                type="email"
+                                                name="email"
+                                                placeholder="E-mail"
+                                            />
+                                        </label>
+                                        <button
+                                            type="submit"
+                                            class="newsletter__sign-up-button"
                                         >
-                                            <use
-                                                href="./images/icons.svg#icon-icon-send"
-                                            ></use>
-                                        </svg>
-                                    </button>
-                                </form>
+                                            Zapisz się
+                                            <svg
+                                                class="newsletter__button-icon"
+                                                width="24px"
+                                                height="24px"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-icon-send"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </section>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button
+                type="button"
+                class="menu-container__close-menu js-close-menu"
+            >
+                <svg width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu-close"></use>
+                </svg>
+            </button>
+            <div>
+                <ul class="menu-container__list">
+                    <li>
+                        <a href="index.html" class="menu-container__link"
+                            >Agencja</a
+                        >
+                    </li>
+                    <li>
+                        <a href="portfolio.html" class="menu-container__link"
+                            >Portfolio</a
+                        >
+                    </li>
+                    <li>
+                        <a href="" class="menu-container__link">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="menu-container__contact">
+                    <a class="menu-container__tel" href="tel:+48111111111"
+                        >+48&nbsp;111&nbsp;111&nbsp;111</a
+                    >
+
+                    <a
+                        class="menu-container__email"
+                        href="mailto:info@devstudio.com"
+                        >info@devstudio.com</a
+                    >
+                </div>
+                <ul class="menu-container__socials">
+                    <li>
+                        <a href="" class="menu-container__socials-link"
+                            >Instagram</a
+                        >
+                    </li>
+                    <li class="menu-container__socials-line">
+                        <a href="" class="menu-container__socials-link"
+                            >Twitter</a
+                        >
+                    </li>
+                    <li class="menu-container__socials-line">
+                        <a href="" class="menu-container__socials-link"
+                            >Facebook</a
+                        >
+                    </li>
+                    <li class="menu-container__socials-line">
+                        <a href="" class="menu-container__socials-link"
+                            >Linkedin</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

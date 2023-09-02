@@ -1,11 +1,40 @@
 .footer {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    max-width: 1600px;
+    @include desktop {
+        flex-direction: column;
+        align-items: flex-start;
+    }
     &__section {
-        display: inline-flex;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        align-content: center;
         column-gap: 70px;
+        @include desktop {
+            display: inline-flexbox;
+            flex-direction: row;
+            align-items: stretch;
+            align-content: stretch;
+        }
+    }
+    &__wrap {
+        text-align: center;
+        @include desktop {
+            text-align: left;
+        }
+    }
+    &__background {
+        background-color: $main-backgroundColor;
+
+        @include desktop {
+            height: 252px;
+            display: flex;
+        }
     }
     &__adress {
         color: $main-text-color;
@@ -13,12 +42,18 @@
         font-size: $fontSize;
         font-weight: $modal-input-weight;
         line-height: $rules-height;
+        letter-spacing: 0.42px;
         text-align: left;
         margin-top: 20px;
+        padding-left: 10px;
         cursor: pointer;
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include desktop {
+            width: 246px;
+            padding-left: 0px;
+        }
         &:hover,
         &:focus {
             color: $active-color;
@@ -30,13 +65,16 @@
         font-style: normal;
         line-height: $section-title-line;
         font-size: $fontSize;
-        width: 231px;
-        text-align: left;
+        text-align: center;
         margin-top: 9px;
         cursor: pointer;
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include desktop {
+            width: 231px;
+            text-align: left;
+        }
         &:hover,
         &:focus {
             color: $active-color;
@@ -44,15 +82,26 @@
     }
     &__join-us {
         color: $main-text-color;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
         line-height: $section-title-line;
         font-size: $fontSize;
-        width: 113px;
         padding-bottom: 20px;
-        margin-top: -25px;
+        @include desktop {
+            width: 113px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 12px;
+        }
     }
     &__social-grid {
         display: flex;
+        justify-content: center;
         column-gap: 10px;
+        @include desktop {
+            justify-content: stretch;
+        }
     }
     &__social-icon {
         width: 44px;

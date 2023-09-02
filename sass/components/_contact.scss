@@ -1,26 +1,53 @@
 .contact {
     display: none;
-    align-items: center;
-    column-gap: 50px;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+    }
     &__details {
         color: $contact-color;
-        font-size: $fontSize;
-        font-weight: $nav-weight;
-        line-height: $section-title-line;
         text-align: left;
         transition-property: color, fill;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include tablet {
+            font-size: $modal-input-size;
+            letter-spacing: 0.24px;
+        }
+        @include desktop {
+            font-size: $fontSize;
+            font-weight: $nav-weight;
+            line-height: $section-title-line;
+        }
         &:hover,
         &:focus {
             color: $active-color;
             fill: $active-color;
         }
     }
-    &__icon {
+    &__icon-tel {
         display: flex;
         column-gap: 10px;
         align-items: center;
         fill: $contact-color;
+        @include tablet {
+            gap: 8px;
+        }
+    }
+    &__icon-mail {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        fill: $contact-color;
+        @include tablet {
+            gap: 8px;
+        }
     }
 }

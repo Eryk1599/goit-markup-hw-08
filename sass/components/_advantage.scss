@@ -1,24 +1,45 @@
 .advantage {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     column-gap: 30px;
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @include desktop {
+        flex-direction: row;
+    }
     & p,
     span {
         color: $contact-color;
-        width: 270px;
+        width: 450px;
         font-weight: $modal-input-weight;
         font-size: $fontSize;
         line-height: $rules-height;
+        @include tablet {
+            width: 354px;
+        }
+        @include desktop {
+            width: 270px;
+        }
     }
     & h4 {
         font-weight: $fontWeight;
-        width: 270px;
+        width: 450px;
         font-size: $fontSize;
         line-height: $section-title-line;
         margin-bottom: 10px;
+        @include tablet {
+            width: 354px;
+        }
+        @include desktop {
+            width: 270px;
+        }
     }
     &__icon {
-        width: 270px;
+        width: 450px;
         height: 120px;
         border-radius: 4px;
         background-color: $advantage-bg-color;
@@ -26,5 +47,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include tablet {
+            width: 354px;
+        }
+        @include desktop {
+            width: 270px;
+        }
     }
 }

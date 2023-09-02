@@ -3,6 +3,7 @@
 }
 ul {
     list-style-type: none;
+    padding: 0;
 }
 button {
     border: none;
@@ -11,10 +12,17 @@ button {
 a {
     text-decoration: none;
 }
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 .container {
     max-width: 480px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+    overflow-x: hidden;
     @include tablet {
         max-width: 768px;
     }
@@ -32,18 +40,30 @@ textarea {
     resize: none;
 }
 ::placeholder {
-    color: $placeholder-color;
+    color: $modal-comment-color;
 }
-footer {
-    background-color: $main-backgroundColor;
-    height: 252px;
-    display: flex;
-}
+
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablet {
+        justify-content: flex-start;
+    }
+    @include desktop {
+        justify-content: center;
+    }
 }
 .none {
     display: none;
+}
+.column {
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    @include desktop {
+        margin-top: 0px;
+        flex-direction: column;
+    }
 }

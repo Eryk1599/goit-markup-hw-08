@@ -1,7 +1,10 @@
 .product {
-    display: flex;
+    display: none;
     align-items: center;
     column-gap: 30px;
+    @include desktop {
+        display: flex;
+    }
     &__title {
         position: relative;
     }

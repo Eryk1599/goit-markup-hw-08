@@ -3,21 +3,32 @@
     font-weight: $fontWeight;
     font-size: $fontSize;
     line-height: $section-title-line;
-    width: 207px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
     padding-bottom: 20px;
-    margin-top: -36px;
-    margin-left: 78px;
+
+    @include desktop {
+        width: 207px;
+        display: inline-block;
+        flex-direction: row;
+        margin-left: 78px;
+        margin-top: 0px;
+    }
     &__label {
-        width: 358px;
+        width: 450px;
         height: 50px;
         background-color: $main-backgroundColor;
-        margin-left: 78px;
         border: 1px solid $news-border-color;
         border-radius: 4px;
         padding-left: 20px;
+        margin-bottom: 20px;
         transition-property: background-color, color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include desktop {
+            width: 358px;
+        }
         &:hover,
         &:focus {
             color: $studio-color;
@@ -28,6 +39,7 @@
         display: inline-flex;
         align-items: center;
         text-align: center;
+
         width: 200px;
         height: 50px;
         font-family: "Roboto", "sans-serif";
@@ -37,6 +49,7 @@
         letter-spacing: 0.06em;
         color: $main-text-color;
         margin-left: 12px;
+        margin-bottom: 60px;
         padding-left: 42px;
         column-gap: 24px;
         background-color: $active-color;

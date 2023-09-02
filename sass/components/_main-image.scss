@@ -1,26 +1,90 @@
 .main-image {
+    background-color: $main-backgroundColor;
+    padding: 118px 0;
+    margin: 0 auto;
     background-image: linear-gradient(
             to top,
             $background-gradient-color,
             $background-gradient-color
         ),
-        url("../images/main-background.jpg");
+        url("../images/background-mobile.jpg");
     background-repeat: no-repeat;
     object-fit: fill;
+    background-position: center;
     background-position: 50% 50%;
-    background-color: $main-backgroundColor;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    width: 100%;
+
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+                to top,
+                $background-gradient-color,
+                $background-gradient-color
+            ),
+            url("../images/background-mobilex2.jpg");
+    }
+    @include tablet {
+        background-image: linear-gradient(
+                to top,
+                $background-gradient-color,
+                $background-gradient-color
+            ),
+            url("../images/background-tablet.jpg");
+        @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    to top,
+                    $background-gradient-color,
+                    $background-gradient-color
+                ),
+                url("../images/background-tabletx2.jpg");
+        }
+    }
+    @include desktop {
+        padding: 200px 0;
+        background-image: linear-gradient(
+                to top,
+                $background-gradient-color,
+                $background-gradient-color
+            ),
+            url("../images/main-background.jpg");
+        @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    to top,
+                    $background-gradient-color,
+                    $background-gradient-color
+                ),
+                url("../images/main-backgroundx2.jpg");
+        }
+    }
+    &__container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     &__text {
         text-align: center;
         color: $main-text-color;
         font-weight: $mainWeight;
-        font-size: $mainSize;
-        line-height: $main-line;
-        letter-spacing: 2.64px;
-        width: 696px;
+        font-size: $logo-fontSize;
+        line-height: 1.61;
+        letter-spacing: 1.56px;
+        width: 365px;
         margin-bottom: 30px;
+        @include desktop {
+            font-size: $mainSize;
+            width: 696px;
+            letter-spacing: 2.64px;
+            line-height: $main-line;
+        }
     }
     &__button {
         color: $main-text-color;

@@ -1,7 +1,23 @@
 .navigation {
     display: none;
-    padding: 32px 371px 32px 93px;
-    column-gap: 46px;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 101px 32px 83px;
+    }
+    @include desktop {
+        margin-left: 93px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        column-gap: 46px;
+        @include tablet {
+            gap: 60px;
+        }
+    }
     &__link {
         color: $nav-color;
         font-weight: $nav-weight;

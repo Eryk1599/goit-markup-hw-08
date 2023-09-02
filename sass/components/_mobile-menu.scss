@@ -1,0 +1,85 @@
+.menu-container.is-open {
+    transform: translateX(0);
+}
+.menu-container {
+    background-color: $main-text-color;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    &__close-menu {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+            fill: $active-color;
+            transition-duration: 250ms;
+            transition-timing-function: (0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 48px;
+        gap: 32px;
+    }
+    &__link {
+        color: $nav-color;
+        font-size: 40px;
+        font-weight: $nav-weight;
+        letter-spacing: 0.8px;
+        padding-left: 40px;
+        cursor: pointer;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: (0.4, 0, 0.2, 1);
+        &:hover {
+            color: $active-color;
+        }
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__tel {
+        color: $active-color;
+        font-size: 34px;
+        font-weight: $nav-weight;
+        letter-spacing: 0.68px;
+        margin-left: 40px;
+    }
+    &__email {
+        color: $contact-color;
+        font-size: 24px;
+        font-weight: $nav-weight;
+        letter-spacing: 0.48px;
+        margin-left: 40px;
+    }
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        margin-top: 64px;
+        margin-bottom: 48px;
+        padding-left: 40px;
+        gap: 10px;
+    }
+    &__socials-link {
+        color: $active-color;
+        font-size: $title-size;
+        font-weight: $nav-weight;
+        line-height: 1.22;
+        letter-spacing: 0.36px;
+    }
+    &__socials-line {
+        border-left: 1px solid $input-color;
+        padding-left: 10px;
+    }
+}
