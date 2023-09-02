@@ -11,8 +11,13 @@
     }
     @include desktop {
         flex-direction: row;
+        flex-wrap: nowrap;
     }
-
+    & img {
+        @include desktop {
+            width: 270px;
+        }
+    }
     & h4 {
         font-weight: $nav-weight;
         font-size: $button-size;
