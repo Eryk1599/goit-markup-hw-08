@@ -1,5 +1,8 @@
 .logo {
     text-align: left;
+    @include tablet {
+        text-align: center;
+    }
 
     &__web {
         font-family: $logo-fontFamily;

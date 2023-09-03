@@ -3,34 +3,47 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1600px;
+
     @include desktop {
         flex-direction: column;
         align-items: flex-start;
     }
     &__section {
-        padding-top: 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         align-content: center;
+        padding-top: 60px;
         column-gap: 70px;
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+        }
         @include desktop {
-            display: inline-flexbox;
+            display: flex;
             flex-direction: row;
             align-items: stretch;
             align-content: stretch;
+            justify-content: center;
         }
     }
     &__wrap {
         text-align: center;
+        @include tablet {
+            text-align: center;
+        }
         @include desktop {
             text-align: left;
         }
     }
     &__background {
         background-color: $main-backgroundColor;
-
+        @include tablet {
+            height: 463px;
+        }
         @include desktop {
             height: 252px;
             display: flex;
@@ -88,11 +101,21 @@
         line-height: $section-title-line;
         font-size: $fontSize;
         padding-bottom: 20px;
+        @include tablet {
+            width: 206px;
+            margin-top: 10px;
+        }
         @include desktop {
             width: 113px;
             display: flex;
             flex-direction: column;
             padding-top: 12px;
+        }
+    }
+    &__join-tablet {
+        @include tablet {
+            text-align: center;
+            margin-left: 84px;
         }
     }
     &__social-grid {
@@ -117,6 +140,14 @@
         &:focus {
             background-color: $active-color;
             fill: $main-text-color;
+        }
+    }
+    &__newsletter-column {
+        @include tablet {
+            margin-top: 60px;
+        }
+        @include desktop {
+            margin-top: 0px;
         }
     }
 }

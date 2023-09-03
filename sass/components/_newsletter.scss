@@ -7,13 +7,11 @@
     justify-content: center;
     align-content: center;
     padding-bottom: 20px;
-
     @include desktop {
         width: 207px;
-        display: inline-block;
-        flex-direction: row;
-        margin-left: 78px;
-        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
     }
     &__label {
         width: 450px;
@@ -26,8 +24,15 @@
         transition-property: background-color, color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include tablet {
+            display: flex;
+            justify-content: center;
+        }
         @include desktop {
+            display: inline-flex;
             width: 358px;
+            margin-left: 0px;
+            margin-right: 0px;
         }
         &:hover,
         &:focus {

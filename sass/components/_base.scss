@@ -62,8 +62,12 @@ textarea {
     text-align: center;
     justify-content: center;
     flex-direction: column;
+    @include tablet {
+        margin-top: 0px;
+        align-items: flex-start;
+    }
     @include desktop {
         margin-top: 0px;
-        flex-direction: column;
+        flex-direction: row;
     }
 }
